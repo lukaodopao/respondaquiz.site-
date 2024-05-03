@@ -1,0 +1,421 @@
+<html lang="pt-br"><head><script async="" src="js/fbevents.js"></script><script src="js/latest.js" async="" defer=""></script>
+
+<style type="text/css">
+header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    column-gap: 2em;
+    position: fixed;
+    z-index: 1;
+    background-color: #016cb0;
+    background-image: url(../images/bg__header--mob.png);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+
+
+    <script src="js/latest.js" async="" defer=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-32x32.png">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Quiz - Ypê</title>
+  </head>
+  <body>
+    <header>
+      <i class="fa-solid fa-bars" style="color: white"></i>
+      <!-- <img src="assets/images/google_logo.svg" alt=""> -->
+      <img src="images/nav_logo_negative.svg" alt="">
+      <span id="saldo" style="margin-left: auto"></span>
+    </header>
+    
+    <!-- Meta Pixel Code -->
+
+
+<!-- Google tag (gtag.js) -->
+
+    
+    
+    <main>
+      <div class="card pergunta01" id="pergunta01">
+        <div class="card__logo">
+          <img src="images/35444.png" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>
+            De 0 a 5, Como você avaliaria sua familiaridade com a Ypê?
+          </h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>
+            Quais são os valores fundamentais da marca Ypê?
+          </h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Qualidade</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Sustentabilidade</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Quais são os tipos de produtos fabricados pela Ypê?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Produtos de limpeza</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Produtos de higiene pessoal</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta01()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+      <div class="card pergunta02" id="pergunta02" style="display: none">
+        <div class="card__logo">
+          <img src="images/maxresdefault.jpg" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>
+            De 0 a 5, como você avaliaria a qualidade dos produtos da Ypê que já experimentou?
+          </h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>
+            Quais são os tipos de produtos de limpeza fabricados pela Ypê?
+          </h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Detergentes</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">
+                Desinfetantes
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Quais são os locais onde os produtos Ypê podem ser encontrados?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Supermercados</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Farmácias</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta02()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+
+      <div class="card pergunta03" id="pergunta03" style="display: none">
+        <div class="card__logo">
+          <img src="images/4.jpg" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>
+            De 0 a 5, Qual é a sua satisfação com os preços dos produtos Ypê?
+          </h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Quais são os valores promovidos pela Ypê?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Qualidade</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Preço baixo</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>
+            Quais são os benefícios dos produtos de limpeza Ypê para o consumidor?
+          </h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Eficiência na limpeza</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Economia de água durante o uso</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta03()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+
+      <div class="card pergunta04" id="pergunta04" style="display: none">
+        <div class="card__logo">
+          <img src="images/ArquivoExibir.jpg" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>
+            De 0 a 5, quão importante é a usualidade da marca Ypê para você?
+          </h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Quais são os tipos de embalagens sustentáveis utilizadas pela Ypê?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">
+                Embalagens de plástico biodegradável
+              </p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">
+                Embalagens produzidas com material reciclado
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Quais são os tamanhos de embalagens comuns dos produtos Ypê?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>500ml</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>5 litros</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta04()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+
+<div class="card pergunta05" id="pergunta05" style="display: none">
+      <div class="card__logo">
+        <img src="images/MAO2.png" alt="">
+      </div>
+      <div class="card__satisfacao">
+        <h2>
+          De 0 a 5, qual a probabilidade de recomendar a Ypê a amigos ou familiares?
+        </h2>
+        <div class="card__gradeContainer">
+          <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star1"></i>
+          </div>
+          <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star2"></i>
+          </div>
+          <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star3"></i>
+          </div>
+          <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star4"></i>
+          </div>
+          <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star5"></i>
+          </div>
+        </div>
+        <div class="card__gradeDescricao">
+          <p>Muito ruim</p>
+          <p>Muito bom</p>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>
+          Quais são os tipos de fragrâncias disponíveis nos produtos de limpeza Ypê?
+        </h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Lavanda</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Eucalipto</p>
+          </div>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>Quais são os formatos comuns dos produtos Ypê?</h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+            <p>Líquido</p>
+          </div>
+          <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+            <p>Em pó</p>
+          </div>
+        </div>
+      </div>
+      <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta05()" disabled="">
+        Enviar avaliação
+      </button>
+    </div>
+
+      <div class="card finalizacao" id="finalizacao" style="display: none">
+        <div class="finalizacao__titulo">
+          <h1 style="font-family: 'Roboto', sans-serif; color: #016cb0;">PARABÉNS!</h1>
+        </div>
+        <div class="finalizacao__trofeu">
+          <img src="images/thleifert.png" alt="">
+        </div>
+        <div class="finalizacao__descricao">
+          <p>
+          Você concluiu nossa avaliação da Ypê e ganhou um
+          <b>Kit Especial de Dias das Mães Ypê - 25 Produtos </b>! Clique no botão <b>RESGATAR</b> abaixo para
+          resgatar seu prêmio.
+        </p>
+        <p>
+          Agradecemos sua participação e esperamos que desfrute do seu Kit repleto de cuidado e 
+		  eficácia para a limpeza da sua casa.<br><br>Com carinho, <br>Equipe Ypê.
+        </p>
+        </div>
+        <div class="finalizacao__botao">
+          <a href="https://ypebrasil.com/products/kit-especial-de-dia-das-maes-super-caixa-ype-25-produtos-20-quilos-20kg"><button><i class="fa-solid fa-gift"></i> RESGATAR</button></a>
+        </div>
+      </div>
+
+      <button data-bs-toggle="modal" data-bs-target="#modal01" id="popup" style="display: none"></button>
+
+  
+          
+        
+      
+    </main>
+
+    <script src="js/hideAllExcept.js"></script>
+    <script src="js/selectedCard.js"></script>
+    <script src="js/selectedResponse.js"></script>
+    <script src="js/buttonCheck.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/sendResponse.js"></script>
+    <script>
+      $(document).ready(function () {
+        let data = new Date();
+
+        var date = data.getDate();
+        var month = [
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro",
+        ][data.getMonth()];
+        var year = data.getFullYear();
+
+        $("#todayDate").html(`${date} de ${month} de ${year}**`);
+      });
+    </script>
+    <script type="text/javascript" src="js/crypto-js.min.js"></script>
+
+    <script>
+      var popup = document.getElementById("popup");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        popup.click();
+      });
+    </script>
+    <script async="" defer=""></script>
+
+</body></html>
